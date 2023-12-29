@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: /*linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),*/ url('photo-1419242902214-272b3f66ee7a.avif');
+    
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .glass-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .glass-form-container {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: white;
+    animation: glow 2s infinite alternate, fadeIn 1s;
+  }
+  
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px var(--glow-color, rgba(255, 255, 255, 0.5));
+    }
+    to {
+      box-shadow:0 0 40px 20px #fff, 0 0 100px 50px #0ff;
+    transition: box-shadow 4s ease-out;
+    animation: spin 16s linear infinite  ;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .glass-form {
+    width: 100%;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    animation: glowUp 1s forwards;
+  }
+  
+  @keyframes glowUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  i {
+    margin-right: 10px;
+    font-size: 1.2em;
+    color: var(--icon-color, white); 
+  }
+  
+  input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    animation: glowUp 1s forwards;
+  }
+  
+  button {
+    padding: 10px;
+    background: linear-gradient(to right, blue, pink);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition:  transform 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+    transform: scale(1.1);
+    animation: shake 0.5s;
+  }
+  
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25%, 75% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+  }
